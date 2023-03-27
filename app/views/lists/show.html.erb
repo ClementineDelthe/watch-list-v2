@@ -1,0 +1,15 @@
+<H1><%= @list.name %></H1>
+<div class="container">
+ <%= link_to "New Bookmark", new_list_bookmark_path([@list, @bookmark]) %>
+  <% @list.bookmarks.each do |bookmark| %>
+  <ul>
+    <li>
+      <%= bookmark.movie.title %>
+      <br>
+      <%= bookmark.movie.overview %>
+      <br>
+      <p><%= link_to '<i class="fa-regular fa-trash-can"></i>'.html_safe, bookmark_path(bookmark), data: { turbo_method: :delete, turbo_confirm: "Etes vous sûr?" } %></p>
+    </li>
+  </ul>
+  <% end %>
+</div>

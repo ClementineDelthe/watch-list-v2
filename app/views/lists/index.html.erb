@@ -1,0 +1,12 @@
+<h1>ALL LISTS</h1>
+<ul>
+  <% @lists.each do |list| %>
+  <li><%= link_to list.name, list_path(list) %>
+  <p><%= link_to '<i class="fa-regular fa-trash-can"></i>'.html_safe, list_path(list), data: { turbo_method: :delete, turbo_confirm: "Etes vous sûr?" } %></p>
+  </li>
+  <% end %>
+</ul>
+
+
+<button type="button" class="btn btn-primary"><%= link_to "Nouvelle List", new_list_path %>
+</button>
