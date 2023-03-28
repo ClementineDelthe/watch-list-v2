@@ -1,6 +1,9 @@
 <H1><%= @list.name %></H1>
+<%= cl_image_tag @list.photo.key, height: 300, width: 400, crop: :fill %>
+
 <div class="container">
- <%= link_to "New Bookmark", new_list_bookmark_path([@list, @bookmark]) %>
+  <%= link_to "New Bookmark", new_list_bookmark_path([@list, @bookmark]) %>
+  <%# <%= render "bookmarks/new", list: @list, bookmark: @bookmark %>
   <% @list.bookmarks.each do |bookmark| %>
   <ul>
     <li>

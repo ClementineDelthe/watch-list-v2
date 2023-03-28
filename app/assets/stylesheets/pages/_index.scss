@@ -1,2 +1,80 @@
 // Import page-specific CSS files here.
 @import "home";
+h1 {
+  text-align: center;
+}
+
+.container {
+  text-align: center;
+  position: absolute;
+}
+
+.card-global {
+  display: grid;
+  grid-template-columns: 1fr 1fr 1fr;
+  grid-gap: 16px;
+}
+
+.card {
+  display: grid;
+
+
+  img {
+    height: 100%;
+    width: 100%;
+  }
+}
+
+.button {
+  align-items: center;
+}
+// .card {
+//   display: flex;
+//   width: 500px;
+// }
+
+.card-category {
+  background-size: cover;
+  background-position: center;
+  height: 100%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  color: white;
+  font-size: 24px;
+  font-weight: bold;
+  text-shadow: 1px 1px 3px rgba(0,0,0,0.2);
+  border-radius: 5px;
+  box-shadow: 0 0 15px rgba(0,0,0,0.2);
+  position: relative;
+
+}
+
+.h3 {
+  position: absolute;
+}
+
+
+
+.search-form-control {
+  position: relative;
+}
+
+.search-form-control .btn {
+  position: absolute;
+  top: 8px;
+  bottom: 8px;
+  right: 8px;
+}
+
+.search-form-control .form-control {
+  height: 3.5rem;
+  box-shadow: 0 2px 6px rgba(0,0,0,0.08);
+  border: 1px solid #E7E7E7;
+}
+
+.search-form-control .form-control:focus {
+  border: 1px solid #1EDD88;
+  outline: none !important;
+  box-shadow: 0 2px 6px rgba(0,0,0,0.08);
+}

@@ -1,8 +1,11 @@
-<%= simple_form_for [@list, @bookmark] do |f| %>
-  <%# <%= f.input :movie_ids, as: :select, collection: Movie.all, label: "movie" %>
-  <%= f.association :movie %>
-  <%= f.input :comment %>
-  <%= f.button :submit %>
-<% end %>
-
-<%# list_bookmarks(@list, @bookmark) %>
+<div class="container">
+  <div class="form-new">
+    <%= simple_form_for [@list, @bookmark] do |f| %>
+      <%= f.input :comment %>
+      <%= f.association :movie %>
+      <div class="button">
+        <%= f.button :submit %>
+      </div>
+    <% end %>
+  </div>
+</div>
